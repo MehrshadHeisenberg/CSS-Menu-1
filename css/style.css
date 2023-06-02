@@ -164,25 +164,37 @@ body {
 
 .list__item--hover-left {
   position: absolute;
-  left: -7px;
+  left: -4px;
   bottom: 0;
-  background-color: rgb(190, 27, 27);
-  border-radius: 50px;
+  background-color: rgb(149, 30, 30);
+  border-radius: 10px;
+  z-index: 1;
 
   height: 0;
   width: 4px;
 
-  transition: all 0.3s;
+  transition: height 0.3s, width 0.7s 0.3s;
 }
 
 .list__item:hover .list__item--hover-left {
   height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.list__item:hover .option .list__icon-box {
+  background-color: rgb(149, 30, 30);
+}
+
+.list__item:hover .option .list__icon-box .list__icon {
+  background-color: rgb(149, 30, 30);
 }
 
 .option {
   display: flex;
   align-items: center;
   gap: 1.4rem;
+  z-index: 10;
 }
 
 .list__icon-box {
@@ -192,8 +204,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
   border-radius: 50%;
+
+  transition: all 0.3s 0.3s;
 }
 
 .list__icon {
@@ -201,11 +216,14 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: #262626;
+
+  transition: all 0.3s 0.3s;
 }
 
 .list__text {
   color: var(--clr-white);
   font-size: 1.8rem;
+  z-index: 10;
 }
 
 .menu__img-box {
@@ -227,6 +245,7 @@ body {
   color: var(--clr-white);
   background-color: #e7be5e;
   font-size: 1.4rem;
+  z-index: 10;
 
   position: absolute;
   right: 10%;
