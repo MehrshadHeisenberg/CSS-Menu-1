@@ -8,6 +8,8 @@ body {
   position: fixed;
   right: 20px;
   top: 20px;
+
+  z-index: 1000;
 }
 
 .src__link {
@@ -23,6 +25,7 @@ body {
   color: white;
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1000;
 
   transition: all 0.3s;
 }
